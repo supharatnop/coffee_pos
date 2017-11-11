@@ -107,6 +107,8 @@
             this.Payment = new System.Windows.Forms.TabPage();
             this.labelPa = new System.Windows.Forms.Label();
             this.button28 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Payment.SuspendLayout();
@@ -294,6 +296,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label25);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -958,6 +961,17 @@
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.Location = new System.Drawing.Point(42, 74);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(504, 75);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Developer : Supharat Nopphaeat\r\n\r\nGitHub : https://github.com/supharatnop/coffee_" +
+    "pos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -976,6 +990,8 @@
             this.Name = "Form1";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1067,5 +1083,6 @@
         private System.Windows.Forms.TabPage Payment;
         private System.Windows.Forms.Label labelPa;
         private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Label label25;
     }
 }
