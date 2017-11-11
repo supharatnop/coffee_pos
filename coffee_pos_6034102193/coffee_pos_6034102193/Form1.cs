@@ -12,6 +12,7 @@ namespace coffee_pos_6034102193
 {
     public partial class Form1 : Form
     {
+        string sn = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public Form1()
         {
             InitializeComponent();
@@ -26,13 +27,15 @@ namespace coffee_pos_6034102193
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            tabControl1.Controls.Remove(Payment);
         }
         public void coflist(string menu,string bath)
         {
             string[] BM = { menu, bath };
             var listview = new ListViewItem(BM);
             listView1.Items.Add(listview);
+            ListPrice();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -242,6 +245,76 @@ namespace coffee_pos_6034102193
         private void button42_Click(object sender, EventArgs e)
         {
             coflist("Honey lime Soda", "25");
+        }
+
+
+        double pr;
+        public string[] ListPrice()
+        {
+            pr = 0;
+            string[] a = new string[listView1.Items.Count];
+            int li = listView1.Items.Count;
+            for (int i = 0; i < li; i++) 
+            {
+                pr += double.Parse(listView1.Items[i].SubItems[1].Text);
+                a[i] = listView1.Items[i].SubItems[0].Text.ToString();
+            }
+            labelPrice.Text = pr.ToString();
+            return a;
+        }
+
+        public string[] inListPrice()
+        {
+            string[] a = new string[listView1.Items.Count];
+            int li = listView1.Items.Count;
+            for (int i = 0; i < li; i++)
+            {
+                a[i] = listView1.Items[i].SubItems[1].Text.ToString();
+            }
+            return a;
+        }
+
+
+        public void sef()
+        {
+            string[] su = ListPrice();
+            string[] no = inListPrice();
+            string file = "KaToei_coffe" + DateTime.Now.ToString("hhmmss_dd_mm_yyyy");
+            string filebill = "KaToei_coffe";
+            filebill += "\r\n" + DateTime.Now.ToString("hh:mm:ss") + "\r\n" + DateTime.Now.ToString("dd//mm/yyyy") + "\r\n" + "\r\n";
+            filebill += "Menu" + "\r\n";
+            for (int i = 0; i < listView1.Items.Count; i++ )
+            {
+                filebill += su[i] + new string(' ', 20) + no[i] + " Bath" + "\r\n";
+            }
+            filebill += "\r\n";
+            filebill += "Total Price : " + labelPrice.Text;
+            System.IO.File.WriteAllText(sn + @"\" + file + ".txt", filebill);
+            labelPa.Text += filebill + "\r\n" + "\r\n" + "\r\n" + "\r\n" + "Save File at" + sn + @"\" + file + ".txt";
+        }
+
+
+        bool ok = false;
+        private void button28_Click(object sender, EventArgs e)
+        {
+            if (ok == false)
+            {
+                tabControl1.TabPages.Insert(1, Payment);
+                ok = true;
+                tabControl1.SelectedTab = Payment;
+            }
+            else tabControl1.SelectedTab = Payment;
+
+            if (listView1.Items.Count > 0)
+                sef();
+        }
+
+        private void button43_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            ok = false;
+            tabControl1.Controls.Remove(Payment);
+            labelPrice.Text = "";
         }
     }
 }
