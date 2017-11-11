@@ -47,6 +47,7 @@
             this.button31 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -100,14 +101,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Payment = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.button43 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.Payment = new System.Windows.Forms.TabPage();
-            this.labelPa = new System.Windows.Forms.Label();
             this.button28 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
+            this.labelPa = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -304,6 +304,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.Location = new System.Drawing.Point(42, 74);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(504, 75);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Developer : Supharat Nopphaeat\r\n\r\nGitHub : https://github.com/supharatnop/coffee_" +
+    "pos";
             // 
             // listView1
             // 
@@ -893,6 +904,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Hot";
             // 
+            // Payment
+            // 
+            this.Payment.Controls.Add(this.labelPa);
+            this.Payment.Location = new System.Drawing.Point(4, 22);
+            this.Payment.Name = "Payment";
+            this.Payment.Size = new System.Drawing.Size(982, 598);
+            this.Payment.TabIndex = 2;
+            this.Payment.Text = "Payment";
+            this.Payment.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -905,9 +926,10 @@
             // 
             // button43
             // 
+            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button43.Location = new System.Drawing.Point(1157, 575);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(75, 23);
+            this.button43.Size = new System.Drawing.Size(84, 58);
             this.button43.TabIndex = 51;
             this.button43.Text = "Claer";
             this.button43.UseVisualStyleBackColor = true;
@@ -933,44 +955,27 @@
             this.label23.TabIndex = 53;
             this.label23.Text = "Bath";
             // 
-            // Payment
-            // 
-            this.Payment.Controls.Add(this.labelPa);
-            this.Payment.Location = new System.Drawing.Point(4, 22);
-            this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(982, 598);
-            this.Payment.TabIndex = 2;
-            this.Payment.Text = "Payment";
-            this.Payment.UseVisualStyleBackColor = true;
-            // 
-            // labelPa
-            // 
-            this.labelPa.AutoSize = true;
-            this.labelPa.Location = new System.Drawing.Point(67, 60);
-            this.labelPa.Name = "labelPa";
-            this.labelPa.Size = new System.Drawing.Size(0, 13);
-            this.labelPa.TabIndex = 0;
-            // 
             // button28
             // 
+            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button28.Location = new System.Drawing.Point(1042, 575);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
+            this.button28.Size = new System.Drawing.Size(86, 58);
             this.button28.TabIndex = 54;
             this.button28.Text = "Payment";
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
-            // label25
+            // labelPa
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label25.Location = new System.Drawing.Point(42, 74);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(504, 75);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "Developer : Supharat Nopphaeat\r\n\r\nGitHub : https://github.com/supharatnop/coffee_" +
-    "pos";
+            this.labelPa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.labelPa.Location = new System.Drawing.Point(8, 14);
+            this.labelPa.Multiline = true;
+            this.labelPa.Name = "labelPa";
+            this.labelPa.ReadOnly = true;
+            this.labelPa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.labelPa.Size = new System.Drawing.Size(941, 557);
+            this.labelPa.TabIndex = 0;
             // 
             // Form1
             // 
@@ -1081,8 +1086,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TabPage Payment;
-        private System.Windows.Forms.Label labelPa;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox labelPa;
     }
 }

@@ -297,6 +297,7 @@ namespace coffee_pos_6034102193
         bool ok = false;
         private void button28_Click(object sender, EventArgs e)
         {
+            labelPa.Text = "";
             if (ok == false)
             {
                 tabControl1.TabPages.Insert(1, Payment);
